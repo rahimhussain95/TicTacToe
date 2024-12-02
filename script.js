@@ -1,20 +1,29 @@
 const players = [
-    { name: '', score: 0, mark: 'X'},
-    { name: '', score: 0, mark: 'O'}
+    { name: 'Player 1', score: 0, mark: 'X'},
+    { name: 'Player 2', score: 0, mark: 'O'}
 ];
-
-let currentPlayer = players[0];
 
 function playMatch() {
     document.getElementById('entry').addEventListener('submit', function(event){
         event.preventDefault();
-        const player1Entry = document.getElementById
+        
+        const player1Entry = document.getElementById('player1').value;
+        const player2Entry = document.getElementById('player2').value;
+
+        players[0].name = player1Entry;
+        players[1].name = player2Entry;
 
         document.getElementById('entry').style.display = 'none';
-        document.getElementById('gameboard').style.display = 'block';
-        document.getElementById('playInfo').style.display = 'block';
-    }
+        document.getElementById('gameboard').style.display = 'grid';
+        document.getElementById('playInfo').style.display = 'flex';
+
+        document.getElementById('p1').textContent = `Player 1: ${players[0].name}`;
+        document.getElementById('p2').textContent = `Player 2: ${players[1].name}`;
+
+    });
 }
+
+let currentPlayer = players[0];
 
 function grid(){
     const gameboard = document.getElementById('gameboard');
@@ -111,5 +120,6 @@ function hub(){
     hubTwo.innerHTML = `${players[1].name}<br>${players[1].score}`; 
 }
 
+playMatch();
 grid();
 playGame();
