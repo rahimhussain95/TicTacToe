@@ -79,3 +79,8 @@ body {
     border: black;
 }
 
+.win {
+    color: red;
+    font-weight: bolder;
+}
+

@@ -31,7 +31,7 @@ function playGame(){
     })
 
     hub();
-    gameState();
+    const result = gameState();
     // win conditions: if [0].text == 1,2 or 3,6, 
     // if [2].text == 5,8
     // if [4].text == 1,7 or 3,5 or 0,8 or 2,6
@@ -84,7 +84,7 @@ function gameState(){
         return 'tie';
     }
 
-    return;
+    return null;
 
 }
 
