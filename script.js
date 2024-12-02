@@ -1,9 +1,20 @@
 const players = [
-    { name: 'Player 1', score: 0, mark: 'X'},
-    { name: 'Player 2', score: 0, mark: 'O'}
+    { name: '', score: 0, mark: 'X'},
+    { name: '', score: 0, mark: 'O'}
 ];
 
 let currentPlayer = players[0];
+
+function playMatch() {
+    document.getElementById('entry').addEventListener('submit', function(event){
+        event.preventDefault();
+        const player1Entry = document.getElementById
+
+        document.getElementById('entry').style.display = 'none';
+        document.getElementById('gameboard').style.display = 'block';
+        document.getElementById('playInfo').style.display = 'block';
+    }
+}
 
 function grid(){
     const gameboard = document.getElementById('gameboard');
@@ -32,17 +43,11 @@ function playGame(){
     })
 
     hub();
-    // win conditions: if [0].text == 1,2 or 3,6, 
-    // if [2].text == 5,8
-    // if [4].text == 1,7 or 3,5 or 0,8 or 2,6
-    // as long as the text isn't blank and is an x or o
     // win message and add a point to the winning player
     // after certain points pick a winner
     // alternate starting player based on win?
     // add an option to clear the board
-    // winner has a line drawn or the mark is red for one person?
     //have current players box light up
-    //option for a tie
     //result and name insertion
     
 }

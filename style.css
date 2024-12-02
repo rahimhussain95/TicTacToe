@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
     background-color: black;
     color: aliceblue;
@@ -7,6 +9,36 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.press-start-2p-regular {
+    font-family: 'Press Start 2P', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 75px;
+}
+
+#entry, h1 {
+    font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+}
+
+#entry input{
+    color: white;
+    border: black;
+    padding: 40px;
+    background-color: black;
+    font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+
+}
+
+#entry input[type="text"]:focus {
+    border-color: black;
+    box-shadow: black;
+    font-size: 35px;
+    outline: none;
 }
 
 #gameboard {

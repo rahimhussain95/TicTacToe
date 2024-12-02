@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Tic-Tac-Toe</h1>
-   <div id="gameboard"></div>
-   <div id="playInfo">
+    <form id = "entry">
+        <label for="player1">Player 1: </label>
+        <input type="text" id="player1" name="player1" required autofocus>
+        <br>
+        <label for="player2">Player 2: </label>
+        <input type="text" id="player2" name="player2" required>
+        <br>
+        <button id="enter" type="submit" style="display: none;"></button>
+    </form>
+   <div id="gameboard" style="display: none;"></div>
+   <div id="playInfo" style="display: none;">
         <div id="players">
             <div id="p1"></div>
             <div id="p2"></div>
