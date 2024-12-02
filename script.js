@@ -32,9 +32,7 @@ function playGame(){
 
     hub();
 
-    for (let j = 0; j < 9; j*=3){
-        const firstTic = document.querySelector('tic')[0];
-    }
+    if ()
     // win conditions: if [0].text == 1,2 or 3,6, 
     // if [2].text == 5,8
     // if [4].text == 1,7 or 3,5 or 0,8 or 2,6
@@ -45,7 +43,29 @@ function playGame(){
     // add an option to clear the board
     // winner has a line drawn or the mark is red for one person?
     //have current players box light up
+    //option for a tie
+    //result and name insertion
     
+}
+
+function checkWin(){
+    const winners = [
+        [0, 1, 2],
+        [0, 3, 6],
+        [0, 4, 8],
+        [1, 4, 7],
+        [2, 5, 8],
+        [2, 4, 6],
+        [3, 4, 5],
+        [6, 7, 8]
+    ];
+
+    const tacs = document.querySelectorAll('tic');
+
+    winners.forEach(function(winCon){
+        if (tacs[winCon][0].textContent == tacs[winCon][1].textContent == tacs[winCon][2].textContent)
+    });
+
 }
 
 function hub(){
