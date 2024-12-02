@@ -31,8 +31,7 @@ function playGame(){
     })
 
     hub();
-
-    if ()
+    gameState();
     // win conditions: if [0].text == 1,2 or 3,6, 
     // if [2].text == 5,8
     // if [4].text == 1,7 or 3,5 or 0,8 or 2,6
@@ -48,7 +47,7 @@ function playGame(){
     
 }
 
-function checkWin(){
+function gameState(){
     const winners = [
         [0, 1, 2],
         [0, 3, 6],
@@ -60,11 +59,32 @@ function checkWin(){
         [6, 7, 8]
     ];
 
-    const tacs = document.querySelectorAll('tic');
+    const tacs = document.querySelectorAll('.tic');
 
-    winners.forEach(function(winCon){
-        if (tacs[winCon][0].textContent == tacs[winCon][1].textContent == tacs[winCon][2].textContent)
+    const isWin = winners.some(winCon => {
+        if (tacs[winCon[0]].textContent !== '' &&
+            tacs[winCon[0]].textContent === tacs[winCon[1]].textContent &&
+            tacs[winCon[0]].textContent === tacs[winCon[2]].textContent) {
+
+                winCon.forEach(place => {
+                    tacs[place].classList.add('win');
+                })
+
+                return true;
+        }
+
     });
+
+    if (isWin){
+        return currentPlayer.name;
+    }
+
+    const isTie = [...tacs].every(block => block.textContent !== '');
+    if (isTie) {
+        return 'tie';
+    }
+
+    return;
 
 }
 
