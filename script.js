@@ -25,13 +25,13 @@ function playGame(){
         box.addEventListener('click', () => {
             if (box.textContent === ''){
                 box.textContent = currentPlayer.mark;
+                const result = gameState();
                 currentPlayer = currentPlayer === players[0] ? players[1] : players[0];
             }
         })
     })
 
     hub();
-    const result = gameState();
     // win conditions: if [0].text == 1,2 or 3,6, 
     // if [2].text == 5,8
     // if [4].text == 1,7 or 3,5 or 0,8 or 2,6
