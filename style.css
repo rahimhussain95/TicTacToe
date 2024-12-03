@@ -21,7 +21,16 @@ h1 {
     font-size: 75px;
 }
 
-#entry, h1 {
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+#startGame {
+    animation: blink 1s step-start infinite;
+}
+
+#entry, h1, #startGame {
     font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
 }
 

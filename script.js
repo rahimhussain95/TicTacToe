@@ -1,6 +1,6 @@
 const players = [
-    { name: 'Player 1', score: 0, mark: 'X'},
-    { name: 'Player 2', score: 0, mark: 'O'}
+    { name: '', score: 0, mark: 'X'},
+    { name: '', score: 0, mark: 'O'}
 ];
 
 function playMatch() {
@@ -14,6 +14,7 @@ function playMatch() {
         players[1].name = player2Entry;
 
         document.getElementById('entry').style.display = 'none';
+        document.getElementById('startGame').style.display = 'none';
         document.getElementById('gameboard').style.display = 'grid';
         document.getElementById('playInfo').style.display = 'flex';
 
