@@ -121,6 +121,13 @@ function hub(){
     hubTwo.innerHTML = `${players[1].name}<br>${players[1].score}`; 
 }
 
+function resetGame(){
+    document.querySelectorAll('.tic').forEach(box => {
+        box.textContent = '';
+        box.classList.remove('win');
+    })
+}
+
 playMatch();
 grid();
 playGame();
