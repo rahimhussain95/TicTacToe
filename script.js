@@ -14,12 +14,16 @@ function playMatch() {
         players[1].name = player2Entry;
 
         document.getElementById('entry').style.display = 'none';
+        document.getElementById('control').style.display = 'flex';
         document.getElementById('startGame').style.display = 'none';
         document.getElementById('gameboard').style.display = 'grid';
         document.getElementById('playInfo').style.display = 'flex';
 
-        document.getElementById('p1').textContent = `Player 1: ${players[0].name}`;
-        document.getElementById('p2').textContent = `Player 2: ${players[1].name}`;
+        document.getElementById('p1name').textContent = `Player 1: ${players[0].name}`;
+        document.getElementById('p1score').textContent = `Score : ${players[0].score}`;
+        document.getElementById('p2name').textContent = `Player 2: ${players[1].name}`;
+        document.getElementById('p2score').textContent = `Score : ${players[1].score}`;
+        
 
     });
 }
@@ -59,6 +63,7 @@ function playGame(){
     // add an option to clear the board
     //have current players box light up
     //result and name insertion
+    // add some decent comments man, come on
     
 }
 
@@ -109,16 +114,20 @@ function hub(){
     switchOne.addEventListener('click', () => {
         currentPlayer = players[0];
     })
-    const hubOne = document.getElementById('p1');
-    hubOne.innerHTML = `${players[0].name}<br>${players[0].score}`;
+    const hubOneName = document.getElementById('p1name');
+    const hubOneScore = document.getElementById('p1score');
+    hubOneName.innerHTML = `${players[0].name}`;
+    hubOneScore.innerHTML = `${players[0].score}`;
 
     const switchTwo = document.getElementById('p2button');
     switchTwo.innerHTML = players[1].mark;
     switchTwo.addEventListener('click', () => {
         currentPlayer = players[1];
     })
-    const hubTwo = document.getElementById('p2');
-    hubTwo.innerHTML = `${players[1].name}<br>${players[1].score}`; 
+    const hubTwoName = document.getElementById('p2name');
+    const hubTwoScore = document.getElementById('p2score');
+    hubTwoName.innerHTML = `${players[1].name}`;
+    hubTwoScore.innerHTML = `${players[1].score}`;
 }
 
 function resetGame(){

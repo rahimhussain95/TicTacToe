@@ -21,11 +21,20 @@
         <br>
         <button id="enter" type="submit" style="display: none;"></button>
     </form>
+    <div id="control" style="display: none;">
+        <button id="reset">Clear Board</button>
+    </div>
     <div id="gameboard" style="display: none;"></div>
     <div id="playInfo" style="display: none;">
         <div id="players">
-            <div id="p1"></div>
-            <div id="p2"></div>
+            <div id="p1">
+                <div id="p1name"></div>
+                <div id="p1score"></div>
+            </div>
+            <div id="p2">
+                <div id="p2name"></div>
+                <div id="p2score"></div>
+            </div>
         </div>
         <div id="switch">
             <button id="p1button" value="X"></button>
